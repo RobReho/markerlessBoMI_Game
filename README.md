@@ -15,7 +15,7 @@ Starts the Unity Pick and Place application.
 
 ## Pick and Place Game
 The game demo has been inspired by the concept of rehabilitation enhanced by gamification.
-The aim of the game is to collect the cubes disposed on the desk and place them in the correct box. Considering the features of the BoMI application and the Joint used for the algorithm training (nose), the application could be further exploited aiming to the treatment of neck pain and rehabilitation. The targets position are identified by the position of the cubes, therefore the range of movement is flexible and easily customizable to every patient.
+Considering the features of the BoMI application and the Joint used for the algorithm training (nose), the application could be further exploited aiming to the treatment of neck pain and rehabilitation. The aim of the game is to collect the cubes disposed on the desk and place them in the correct box. The targets' position is identified by the position of the cubes, therefore the range of movement is flexible and easily customizable to every patient.
 The end effector of the manipulator is controlled by the cursor and is able to move in a plane parallel to the desk. On the left click event the end effector lowers in the last position occupied and is able to grab a cube or drop it in a box.
 Once a cube is picked, it can only be dropped within the box area. All the cubes should be dropped in the appropriate box to score points and complete the session.
 At the end of a session it is possible to start again from the initial configuration.
