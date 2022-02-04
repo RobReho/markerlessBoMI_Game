@@ -829,7 +829,7 @@ def start_reaching(drPath, lbl_tgt, num_joints, joints, dr_mode, real_cursor,key
     if (game_box==True):
         # start game exe
         thispath = pathlib.Path().resolve()
-        os.startfile( f'"{thispath}\pick&place1.2\Human - Robot Collaboration.exe"')          
+        os.startfile( f'"{thispath}\pick&place\Human - Robot Collaboration.exe"')          
         
     #############################################################################################   
     
