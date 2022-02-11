@@ -231,7 +231,7 @@ class MainApplication(tk.Frame):
             # open pygame and start reaching task
             self.w = popupWindow(self.master, "You will now start practice.")
             self.master.wait_window(self.w.top)
-            start_reaching(self.drPath, self.lbl_tgt, self.num_joints, self.joints, self.dr_mode, self.check_mouse.get(),self.check_keyboard,self.check_game)
+            start_reaching(self.drPath, self.lbl_tgt, self.num_joints, self.joints, self.dr_mode, self.check_mouse.get(),self.check_keyboard.get(),self.check_game.get())
             # [ADD CODE HERE: one of the argument of start reaching should be [self.check_mouse]
             # to check in the checkbox is enable] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         else:
@@ -795,9 +795,15 @@ def start_reaching(drPath, lbl_tgt, num_joints, joints, dr_mode, real_cursor,key
     """
     pygame.init()
        
+    # Create object of openCV, Reaching class and filter_butter3
+    cap = cv2.VideoCapture(0)
+    r = Reaching()
+    filter_curs = FilterButter3("lowpass_4")
+    
+    
     # [ADD CODE HERE] get value from checkbox - is mouse enabled? !!!!!!!!!!!!!!!!!!!
     # Initialize colors only for practice window
-    if (real_cursor==False):    
+    if (keyboard_box == False and game_box == False):    
         # Define some colors
         BLACK = (0, 0, 0)
         RED = (255, 0, 0)
@@ -805,26 +811,21 @@ def start_reaching(drPath, lbl_tgt, num_joints, joints, dr_mode, real_cursor,key
         YELLOW = (255, 255, 0)
         CURSOR = (0.19 * 255, 0.65 * 255, 0.4 * 255)
 
-    if (keyboard_box==True):
-       # start keyboard thread
-        kb = Thread(target=Keyboard)
-        kb.start()
-       
-       
-    # Create object of openCV, Reaching class and filter_butter3
-    cap = cv2.VideoCapture(0)
-    r = Reaching()
-    filter_curs = FilterButter3("lowpass_4")
-
-    
-    if (real_cursor==True):                                                                      
-       count = 0    # initialize counter
-    else:
         # Open a new window
         size = (r.width, r.height)
         screen = pygame.display.set_mode(size)
         # screen = pygame.display.toggle_fullscreen()
 
+    
+    if (real_cursor==True):                                                                      
+       count = 0    # initialize counter
+    
+    # check whether to open keyboard
+    if (keyboard_box==True):
+       # start keyboard thread
+        kb = Thread(target=Keyboard)
+        kb.start()
+        
     # check whether to run game
     if (game_box==True):
         # start game exe

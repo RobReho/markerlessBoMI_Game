@@ -1,32 +1,4 @@
-# markerlessBoMI_Game
-Biomedical Robotics Assignment 4
-
 # Abstract
-Starting from the BoMI markerless application https://github.com/MoroMatteo/markerlessBoMI_FaMa.git
-The GUI has been upgraded with the checkboxes handling the features :
-- Mouse cursor controlling;
-The checkbox activates the control of the real cursor upon starting the Practice mode.
-
-- Virtual keyboard;
-If true, the keyboard window is initialized and functional upon the Practice mode start. When also the Mouse cursor checkbox is true, the cursor is controlled by the BoMI application.
-
-- Unity game application;
-Starts the Unity Pick and Place application.
-
-## Pick and Place Game
-The game demo has been inspired by the concept of rehabilitation enhanced by gamification.
-Considering the features of the BoMI application and the Joint used for the algorithm training (nose), the application could be further exploited aiming to the treatment of neck pain and rehabilitation. The aim of the game is to collect the cubes disposed on the desk and place them in the correct box. The targets' position is identified by the position of the cubes, therefore the range of movement is flexible and easily customizable to every patient.
-The end effector of the manipulator is controlled by the cursor and is able to move in a plane parallel to the desk. On the left click event the end effector lowers in the last position occupied and is able to grab a cube or drop it in a box.
-Once a cube is picked, it can only be dropped within the box area. All the cubes should be dropped in the appropriate box to score points and complete the session.
-At the end of a session it is possible to start again from the initial configuration.
-
-## Limitations
-The BoMI applications shows some issues in the calibration ov the virtual cursor, therefore the overall application is rather uncomfortable to use.
-
-## Further developement
-Being able to customize (within the app) the position of the cubes before every session, and store the most frequent configurations would be the next add-on.
-Another useful feature would be the initial space calibration, in order to identify the actual maximum extention of the interested limb and optimize the simulation space consequently.
-The same principle could be used to implement any sort of games, like extention-focused or path following and speed control.
 
 
 
