@@ -92,7 +92,7 @@ def update_cursor_position_custom(body, map, rot, scale, off):
 
     return cu[0], cu[1]
 
-"""
+
 def update_cursor_position(body, map, rot_ae, scale_ae, off_ae, rot_custom, scale_custom, off_custom):
 
     if type(map) != tuple:
@@ -156,7 +156,7 @@ def update_cursor_position(body, map, rot_ae, scale_ae, off_ae, rot_custom, scal
 
 
     return cu[0], cu[1]
-
+"""
 
 def write_practice_files(r, body, timer_practice):
 

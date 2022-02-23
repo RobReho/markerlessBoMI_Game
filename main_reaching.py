@@ -918,7 +918,7 @@ def start_reaching(drPath, lbl_tgt, num_joints, joints, dr_mode, real_cursor,key
 
             # apply BoMI forward map to body vector to obtain cursor position.
             r.crs_x, r.crs_y = reaching_functions.update_cursor_position \
-                (r.body, map, rot_dr, scale_dr, off_dr, rot_custom, scale_custom, off_custom, window_width, window_height)
+                (r.body, map, rot_dr, scale_dr, off_dr, rot_custom, scale_custom, off_custom)
 
             # Check if the crs is bouncing against any of the 4 walls:
             if r.crs_x >= r.width:
@@ -943,7 +943,7 @@ def start_reaching(drPath, lbl_tgt, num_joints, joints, dr_mode, real_cursor,key
                 if (r.old_crs_x + 10 > r.crs_x > r.old_crs_x - 10 and r.old_crs_y + 10 > r.crs_y > r.old_crs_y - 10 ):
                     count += 1
                     #print(count)
-                    if(count>=150):
+                    if(count>=300):
                         count = 0
                         pyautogui.click()
                         #print("CLICK")
