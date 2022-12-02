@@ -23,7 +23,7 @@ Once a cube is picked, it can only be dropped within the box area. All the cubes
 At the end of a session it is possible to start again from the initial configuration.
 
 ## Limitations
-The BoMI applications shows some issues in the calibration ov the virtual cursor, therefore the overall application is rather uncomfortable to use.
+The BoMI applications shows some issues in the calibration of the virtual cursor, therefore the overall application is rather uncomfortable to use.
 
 ## Further developement
 Being able to customize (within the app) the position of the cubes before every session, and store the most frequent configurations would be the next add-on.
